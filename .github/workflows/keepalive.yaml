@@ -1,14 +1,9 @@
-# Keeps the free Supabase project awake (it pauses after 7 days of no activity).
-# Put this file in your website repo at:  .github/workflows/keepalive.yml
-# Then add two repository secrets (Settings > Secrets and variables > Actions):
-#   SUPABASE_URL       = your Project URL
-#   SUPABASE_ANON_KEY  = your anon / publishable key
 name: keep-supabase-awake
 
 on:
   schedule:
-    - cron: '0 6 */3 * *'      # every 3 days at 06:00 UTC
-  workflow_dispatch:           # lets you also run it by hand
+    - cron: '0 6 */3 * *'
+  workflow_dispatch:
 
 jobs:
   ping:
@@ -18,4 +13,7 @@ jobs:
         env:
           URL: ${{ secrets.SUPABASE_URL }}
           KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-        run: curl -fsS "$URL/rest/v1/site_content?select=key&limit=1" -H "apikey: $KEY" -H "Authorization: Bearer $KEY"
+        run: |
+          curl -fsS "$URL/rest/v1/site_content?select=key&limit=1" \
+            -H "apikey: $KEY" \
+            -H "Authorization: Bearer $KEY"
