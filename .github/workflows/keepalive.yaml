@@ -16,6 +16,6 @@ jobs:
     steps:
       - name: Ask Supabase for one row
         env:
-          URL: ${{ secrets.https://mvebwwjweofwxrmzpyaa.supabase.co }}
-          KEY: ${{ secrets.sb_publishable_vKUSXnFjtje2oQjP6zH7vA_QVqw2E-q }}
+          URL: ${{ secrets.SUPABASE_URL }}
+          KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: curl -fsS "$URL/rest/v1/site_content?select=key&limit=1" -H "apikey: $KEY" -H "Authorization: Bearer $KEY"
