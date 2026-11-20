@@ -8,10 +8,10 @@
 	     ===================================================== -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<title>Contact | Kanjalu Girls High School, Tigania West, Meru</title>
-	<meta name="description" content="Contact Kanjalu Girls High School in Tigania West, Meru County. Call us, email kanjalugirls2013@gmail.com, send a message or book a school visit. Grade 10 admissions for 2027 are open.">
+	<title>Contact | Kanjalu Girls Senior School, Tigania West, Meru</title>
+	<meta name="description" content="Contact Kanjalu Girls Senior School in Tigania West, Meru County. Call us, email kanjalugirls2013@gmail.com, send a message or book a school visit. Grade 10 admissions for 2027 are open.">
 	<meta name="keywords" content="contact Kanjalu Girls, Kanjalu Girls phone, Kanjalu Girls email, Kanjalu Girls location, Tigania West school, Meru County girls school, book school visit, admissions enquiry">
-	<meta name="author" content="Kanjalu Girls High School">
+	<meta name="author" content="Kanjalu Girls Senior School">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 	<meta name="theme-color" content="#5B3A21">
 	<meta name="geo.region" content="KE-26">
@@ -23,15 +23,15 @@
 
 	<!-- OPEN GRAPH / TWITTER -->
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Kanjalu Girls High School">
+	<meta property="og:site_name" content="Kanjalu Girls Senior School">
 	<meta property="og:locale" content="en_KE">
-	<meta property="og:title" content="Contact | Kanjalu Girls High School">
-	<meta property="og:description" content="Call, email or visit Kanjalu Girls High School in Tigania West, Meru County.">
+	<meta property="og:title" content="Contact | Kanjalu Girls Senior School">
+	<meta property="og:description" content="Call, email or visit Kanjalu Girls Senior School in Tigania West, Meru County.">
 	<meta property="og:url" content="https://kanjalugirls.com/contact.html">
 	<meta property="og:image" content="https://kanjalugirls.com/images/hero.jpg">
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Contact | Kanjalu Girls High School">
-	<meta name="twitter:description" content="Call, email or visit Kanjalu Girls High School in Tigania West, Meru County.">
+	<meta name="twitter:title" content="Contact | Kanjalu Girls Senior School">
+	<meta name="twitter:description" content="Call, email or visit Kanjalu Girls Senior School in Tigania West, Meru County.">
 	<meta name="twitter:image" content="https://kanjalugirls.com/images/hero.jpg">
 
 	<!-- FONTS -->
@@ -49,7 +49,7 @@
 				"@type": "ContactPage",
 				"@id": "https://kanjalugirls.com/contact.html#page",
 				"url": "https://kanjalugirls.com/contact.html",
-				"name": "Contact | Kanjalu Girls High School",
+				"name": "Contact | Kanjalu Girls Senior School",
 				"isPartOf": { "@id": "https://kanjalugirls.com/#site" },
 				"about": { "@id": "https://kanjalugirls.com/#school" },
 				"breadcrumb": { "@id": "https://kanjalugirls.com/contact.html#breadcrumb" }
@@ -58,14 +58,14 @@
 				"@type": "BreadcrumbList",
 				"@id": "https://kanjalugirls.com/contact.html#breadcrumb",
 				"itemListElement": [
-					{ "@type": "ListItem", "position": 1, "name": "Kanjalu Girls High School", "item": "https://kanjalugirls.com/" },
+					{ "@type": "ListItem", "position": 1, "name": "Kanjalu Girls Senior School", "item": "https://kanjalugirls.com/" },
 					{ "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://kanjalugirls.com/contact.html" }
 				]
 			},
 			{
 				"@type": "HighSchool",
 				"@id": "https://kanjalugirls.com/#school",
-				"name": "Kanjalu Girls High School",
+				"name": "Kanjalu Girls Senior School",
 				"url": "https://kanjalugirls.com/",
 				"logo": "https://kanjalugirls.com/images/logo.png",
 				"email": "kanjalugirls2013@gmail.com",
@@ -112,12 +112,17 @@
 			.field     { @apply mt-1 w-full rounded-xl border border-header/40 bg-white px-4 py-3 text-bark; }
 			.ic        { @apply grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white shadow-sm ring-1 ring-header/20; }   /* white tile so the coloured icons stand out */
 			.cta-link  { @apply mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-header px-5 py-3 font-semibold text-cream hover:bg-bark; }
+			.slot      { @apply absolute inset-0 h-full w-full object-cover; }   /* logo image fills its circle */
 		}
 
 		/* no blue tap box on phones; keyboard focus still shows a clear ring */
 		a, button, summary, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 		:focus:not(:focus-visible) { outline: none; box-shadow: none; }
 		:focus-visible { outline: 2px solid #5B3A21; box-shadow: 0 0 0 4px #D4B483; }
+
+		/* school email link: standard blue, then standard "visited" purple once clicked */
+		.mail-link { color: #0000EE; text-decoration: underline; }
+		.mail-link:visited, .mail-link.clicked { color: #551A8B; }
 
 		/* page loader: lock scroll until it finishes */
 		body.loading { overflow: hidden; }
@@ -203,13 +208,13 @@
 	     shines, R rolls like a tyre, L flips, progress bar ends,
 	     then the page appears.
 	     ===================================================== -->
-	<div id="loader" class="fixed inset-0 z-[100] grid place-items-center bg-bark text-cream" role="status" aria-label="Loading Kanjalu Girls High School">
+	<div id="loader" class="fixed inset-0 z-[100] grid place-items-center bg-bark text-cream" role="status" aria-label="Loading Kanjalu Girls Senior School">
 		<div class="flex items-center gap-4 px-6">
 
 			<!-- Logo circle (rose until an image is placed) -->
 			<span id="ld-logo" class="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-gold bg-bark-deep sm:h-20 sm:w-20">
 				<svg class="absolute inset-0 m-auto h-9 w-7 sm:h-11 sm:w-9"><use href="#rose"/></svg>
-				<img src="images/logo.png" alt="" class="absolute inset-0 h-full w-full object-contain p-1" onerror="this.remove()">
+				<img src="images/logo.png" alt="" class="slot rounded-full" onerror="this.remove()">
 			</span>
 
 			<!-- Name + progress bar underneath -->
@@ -239,14 +244,14 @@
 				<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
 			</button>
 
-			<a href="index.html" class="flex items-center gap-2.5" aria-label="Kanjalu Girls High School home">
-				<span class="relative block h-10 w-10 shrink-0">
+			<a href="index.html" class="flex items-center gap-2.5" aria-label="Kanjalu Girls Senior School home">
+				<span class="relative block h-10 w-10 shrink-0 overflow-hidden rounded-full">
 					<svg class="absolute inset-0 m-auto h-9 w-7"><use href="#rose"/></svg>
-					<img src="images/logo.png" alt="Kanjalu Girls High School logo" class="absolute inset-0 h-full w-full object-contain" onerror="this.remove()">
+					<img src="images/logo.png" alt="Kanjalu Girls Senior School logo" class="slot rounded-full" onerror="this.remove()">
 				</span>
 				<span class="leading-none">
 					<span class="block font-display text-lg font-bold">Kanjalu Girls</span>
-					<span class="block text-xs text-gold-light">High School</span>
+					<span class="block text-xs text-gold-light">Senior School</span>
 				</span>
 			</a>
 
@@ -276,9 +281,9 @@
 
 		<div class="flex items-center justify-between border-b border-gold/30 bg-header p-4">
 			<span class="flex items-center gap-2.5">
-				<span class="relative block h-10 w-10">
+				<span class="relative block h-10 w-10 overflow-hidden rounded-full">
 					<svg class="absolute inset-0 m-auto h-9 w-7"><use href="#rose"/></svg>
-					<img src="images/logo.png" alt="" class="absolute inset-0 h-full w-full object-contain" onerror="this.remove()">
+					<img src="images/logo.png" alt="" class="slot rounded-full" onerror="this.remove()">
 				</span>
 				<span class="font-display text-lg font-bold">Kanjalu Girls</span>
 			</span>
@@ -347,7 +352,7 @@
 					<span class="ic"><svg class="h-8 w-8" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4caf50" d="M45 16.2l-5 2.75-5 4.75V40h7c1.657 0 3-1.343 3-3V16.2z"/><path fill="#1e88e5" d="M3 16.2l3.614 1.71L13 23.7V40H6c-1.657 0-3-1.343-3-3V16.2z"/><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/><path fill="#c62828" d="M3 12.298V16.2l10 7.5V11.2L9.876 8.859C9.132 8.301 8.228 8 7.298 8 4.924 8 3 9.924 3 12.298z"/><path fill="#fbc02d" d="M45 12.298V16.2l-10 7.5V11.2l3.124-2.341C38.868 8.301 39.772 8 40.702 8 43.076 8 45 9.924 45 12.298z"/></svg></span>
 					<h3 class="mt-5">Email us</h3>
 					<p class="mt-2 text-bark/80">Send us your question and we will reply as soon as we can.</p>
-					<a class="mt-3 break-all font-display text-lg font-bold text-header hover:underline" href="mailto:kanjalugirls2013@gmail.com">kanjalugirls2013@gmail.com</a>
+					<a class="mail-link mt-3 break-all font-display text-lg font-bold" href="mailto:kanjalugirls2013@gmail.com">kanjalugirls2013@gmail.com</a>
 					<a class="cta-link mt-auto" href="mailto:kanjalugirls2013@gmail.com">Send an email</a>
 				</article>
 
@@ -364,8 +369,8 @@
 				<article class="reveal card-x flex flex-col">
 					<span class="ic"><svg class="h-8 w-8" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.8" fill="#fff"/></svg></span>
 					<h3 class="mt-5">Visit us</h3>
-					<p class="mt-2 text-bark/80">Kanjalu Girls High School<br>Tigania West, Meru County, Kenya</p>
-					<a class="cta-link mt-auto" href="https://www.google.com/maps/search/?api=1&query=Kanjalu+Girls+High+School+Tigania+West+Meru" target="_blank" rel="noopener">Get directions</a>
+					<p class="mt-2 text-bark/80">Kanjalu Girls Senior School<br>Tigania West, Meru County, Kenya</p>
+					<a class="cta-link mt-auto" href="https://www.google.com/maps/search/?api=1&query=Kanjalu+Girls+Senior+School+Tigania+West+Meru" target="_blank" rel="noopener">Get directions</a>
 				</article>
 
 			</div>
@@ -406,11 +411,11 @@
 
 				<div class="reveal">
 					<div class="overflow-hidden rounded-3xl border-[1.5px] border-header bg-paper shadow-sm">
-						<iframe title="Map showing Kanjalu Girls High School in Tigania West, Meru County" class="block h-[22rem] w-full sm:h-[30rem]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kanjalu%20Girls%20High%20School%20Tigania%20West%20Meru&output=embed"></iframe>
+						<iframe title="Map showing Kanjalu Girls Senior School in Tigania West, Meru County" class="block h-[22rem] w-full sm:h-[30rem]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kanjalu%20Girls%20Senior%20School%20Tigania%20West%20Meru&output=embed"></iframe>
 					</div>
 					<div class="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-paper p-5">
 						<p class="font-medium"><span class="font-semibold text-header">Find us:</span> Tigania West, Meru County, Kenya</p>
-						<a class="font-semibold text-header hover:underline" href="https://www.google.com/maps/search/?api=1&query=Kanjalu+Girls+High+School+Tigania+West+Meru" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+						<a class="font-semibold text-header hover:underline" href="https://www.google.com/maps/search/?api=1&query=Kanjalu+Girls+Senior+School+Tigania+West+Meru" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
 					</div>
 				</div>
 
@@ -473,11 +478,11 @@
 
 				<div>
 					<div class="flex items-center gap-3">
-						<span class="relative block h-14 w-14 shrink-0">
+						<span class="relative block h-14 w-14 shrink-0 overflow-hidden rounded-full">
 							<svg class="absolute inset-0 m-auto h-12 w-9"><use href="#rose"/></svg>
-							<img src="images/logo.png" alt="Kanjalu Girls High School logo" class="absolute inset-0 h-full w-full object-contain" onerror="this.remove()">
+							<img src="images/logo.png" alt="Kanjalu Girls Senior School logo" class="slot rounded-full" onerror="this.remove()">
 						</span>
-						<p class="font-display text-xl font-bold">Kanjalu Girls High School</p>
+						<p class="font-display text-xl font-bold">Kanjalu Girls Senior School</p>
 					</div>
 					<p class="mt-4 max-w-sm text-cream/80">Enter to learn, go forth to serve.</p>
 					<p class="mt-3 text-sm text-cream/75">
@@ -486,7 +491,7 @@
 					</p>
 
 					<!-- TODO: put your Facebook page link in href -->
-					<a href="#" target="_blank" rel="noopener" aria-label="Kanjalu Girls High School on Facebook" class="mt-5 grid h-11 w-11 place-items-center rounded-full border border-cream/30 hover:bg-cream/10">
+					<a href="#" target="_blank" rel="noopener" aria-label="Kanjalu Girls Senior School on Facebook" class="mt-5 grid h-11 w-11 place-items-center rounded-full border border-cream/30 hover:bg-cream/10">
 						<svg class="h-5 w-5" viewBox="0 0 16 16" fill="currentColor"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
 					</a>
 				</div>
@@ -514,7 +519,7 @@
 			</div>
 
 			<div class="mt-12 flex flex-wrap justify-between gap-2 border-t border-cream/15 py-5 pb-20 text-sm text-cream/70 md:pb-5">
-				<span>&copy; <span id="yr">2026</span> Kanjalu Girls High School. All rights reserved.</span>
+				<span>&copy; <span id="yr">2026</span> Kanjalu Girls Senior School. All rights reserved.</span>
 				<span><a class="hover:text-gold-light" href="privacy.html">Privacy</a> &nbsp;|&nbsp; <a class="hover:text-gold-light" href="terms.html">Terms</a></span>
 			</div>
 		</div>
@@ -544,7 +549,7 @@
 		};
 
 		document.querySelectorAll('[data-tel]').forEach(a => a.href = 'tel:+' + SCHOOL.phone);
-		document.querySelectorAll('[data-wa]').forEach(a => a.href = 'https://wa.me/' + SCHOOL.phone + '?text=' + encodeURIComponent('Hello Kanjalu Girls High School, I would like to ask about...'));
+		document.querySelectorAll('[data-wa]').forEach(a => a.href = 'https://wa.me/' + SCHOOL.phone + '?text=' + encodeURIComponent('Hello Kanjalu Girls Senior School, I would like to ask about...'));
 		document.querySelectorAll('[data-phone-text]').forEach(s => s.textContent = SCHOOL.phoneDisplay);
 
 
@@ -635,7 +640,17 @@
 		});
 
 
-		/* ---------- PAGE LOADER ---------- */
+		/* ---------- EMAIL LINK: blue, turns "visited" purple once clicked ---------- */
+		document.querySelectorAll('.mail-link').forEach(a => {
+			try { if (localStorage.getItem('mail-clicked')) a.classList.add('clicked'); } catch (err) {}
+			a.addEventListener('click', () => {
+				a.classList.add('clicked');
+				try { localStorage.setItem('mail-clicked', '1'); } catch (err) {}
+			});
+		});
+
+
+		/* ---------- PAGE LOADER (same 2.1 second timing as index.html) ---------- */
 		function finishLoader() {
 			if (!$('#loader')) return;
 			$('#loader').remove();
@@ -651,16 +666,16 @@
 		} else {
 			const ld = [...ldBox.children];
 			const tl = gsap.timeline({
-				onComplete: () => gsap.to('#loader', { opacity: 0, duration: .5, onComplete: finishLoader })
+				onComplete: () => gsap.to('#loader', { opacity: 0, duration: .3, onComplete: finishLoader })
 			});
-			tl.from('#ld-logo', { scale: 0, opacity: 0, duration: .5, ease: 'back.out(2)' })       // logo circle pops in
-			  .from(ld, { opacity: 0, duration: .01, stagger: .07 })                                // typing
-			  .fromTo('#ld-sheen', { xPercent: -100 }, { xPercent: 100, duration: .8, ease: 'power2.inOut' })  // shine
-			  .to(ld[0], { rotationX: 360, duration: .8, ease: 'power2.inOut' })                    // R rolls like a tyre
-			  .to(ld[7], { rotationY: 360, duration: .7, ease: 'power2.inOut' })                    // L flips
-			  .to({}, { duration: .25 });                                                           // short pause
+			tl.from('#ld-logo', { scale: 0, opacity: 0, duration: .3, ease: 'back.out(2)' })       // logo circle pops in
+			  .from(ld, { opacity: 0, duration: .01, stagger: .035 })                               // typing
+			  .fromTo('#ld-sheen', { xPercent: -100 }, { xPercent: 100, duration: .45, ease: 'power2.inOut' })  // shine
+			  .to(ld[0], { rotationX: 360, duration: .45, ease: 'power2.inOut' })                   // R rolls like a tyre
+			  .to(ld[7], { rotationY: 360, duration: .4, ease: 'power2.inOut' })                    // L flips
+			  .to({}, { duration: .1 });                                                            // short pause
 			gsap.fromTo('#ld-bar', { scaleX: 0 }, { scaleX: 1, duration: tl.duration(), ease: 'none' });  // bar ends when everything ends
-			setTimeout(finishLoader, 9000);                                                         // safety net
+			setTimeout(finishLoader, 5000);                                                         // safety net
 		}
 	</script>
 

@@ -217,6 +217,7 @@
  data-sb-text="about.slot"  text the admin app can edit
  Shared items use "site" (site.logo). Table: site_content (see index.html).
  Row example: page=about, key=about.principal_photo, type=image, value=<url>
+ Faith card photo: key=about.faith_photo, type=image, value=<url>
 =========================================================================
 -->
 <body class="loading bg-white font-sans text-bark antialiased" style="padding-bottom:env(safe-area-inset-bottom,0px)">
@@ -598,12 +599,20 @@
 			<div class="bg-paper">
 				<div class="sec grid items-stretch gap-6 lg:grid-cols-2">
 
+					<!-- FAITH CARD: profile picture works exactly like the Principal's.
+					     Add images/faith.jpg, or about.faith_photo in Supabase. -->
 					<article class="reveal card-x flex flex-col justify-center">
-						<span class="grid h-14 w-14 place-items-center rounded-2xl bg-header text-cream">
-							<svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M6 9h12"/></svg>
-						</span>
-						<h3 class="mt-5 !text-2xl" data-sb-text="about.faith_title">God-centred. Methodist rooted.</h3>
-						<p class="!mt-3 text-lg" data-sb-text="about.faith_text">Kanjalu Girls is sponsored by the <strong>Methodist Church of Kenya (MCK)</strong>. Faith guides how we teach, how we lead and how we treat one another, so that every girl grows in character as well as in knowledge.</p>
+						<div class="flex items-center gap-5">
+							<div class="relative grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-full bg-header text-cream">
+								<svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M6 9h12"/></svg>
+								<img src="images/churchservice.jpg" alt="Methodist Church of Kenya at Kanjalu Girls Senior School" data-sb-img="about.faith_photo" class="slot" onerror="this.hidden=true">
+							</div>
+							<div>
+								<p class="!mt-0 text-sm font-semibold uppercase tracking-[.18em] text-gold">Our faith</p>
+								<h3 class="!text-2xl" data-sb-text="about.faith_title">God-centred. Methodist rooted.</h3>
+							</div>
+						</div>
+						<p class="!mt-5 text-lg" data-sb-text="about.faith_text">Kanjalu Girls is sponsored by the <strong>Methodist Church of Kenya (MCK)</strong>. Faith guides how we teach, how we lead and how we treat one another, so that every girl grows in character as well as in knowledge.</p>
 					</article>
 
 					<article class="reveal card-x flex flex-col justify-center">
